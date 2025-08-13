@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{99992C03-94B9-49D1-BE04-8A07A54A68B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SolarForge</RootNamespace>
+    <AssemblyName>SolarForge</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>SolarForge.ico</ApplicationIcon>
+    <StartupObject>SolarForge.Program</StartupObject>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Javascript\Projects\sins2modtools\SolarForge\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Solar, Version=1.0.9349.26675, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Javascript\Projects\sins2modtools\SolarForge\bin\Solar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\..\Javascript\Projects\sins2modtools\SolarForge\bin\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="TextureConverterSupport">
+      <HintPath>..\..\..\Javascript\Projects\sins2modtools\SolarForge\bin\TextureConverterSupport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeamEffects\BeamEffectEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BeamEffects\BeamEffectModel.cs" />
+    <Compile Include="BeamEffects\BeamEffectSettings.cs" />
+    <Compile Include="Brushes\BrushEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Brushes\BrushModel.cs" />
+    <Compile Include="Brushes\BrushSettings.cs" />
+    <Compile Include="DeathSequences\DeathSequenceEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeathSequences\DeathSequenceMeshReference.cs" />
+    <Compile Include="DeathSequences\DeathSequenceModel.cs" />
+    <Compile Include="DeathSequences\DeathSequenceSettings.cs" />
+    <Compile Include="Dialogs\KeyBindingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\KeyBindingsDialog.Designer.cs">
+      <DependentUpon>KeyBindingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditorType.cs" />
+    <Compile Include="FileType.cs" />
+    <Compile Include="FileTypeHelpers.cs" />
+    <Compile Include="GalaxyChartFillings\GalaxyChartFillingsEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GalaxyChartFillings\GalaxyChartFillingsEditorDialog.Designer.cs">
+      <DependentUpon>GalaxyChartFillingsEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GalaxyChartFillings\GalaxyChartFillingsEditorModel.cs" />
+    <Compile Include="GalaxyChartFillings\GalaxyChartFillingsSource.cs" />
+    <Compile Include="GalaxyChartFillings\GalaxyChartFillingsTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GalaxyChartFillings\RandomFixtureDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GalaxyChartFillings\RandomSkyboxDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiComponent.cs" />
+    <Compile Include="Gui\GuiComponentsListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiModel.cs" />
+    <Compile Include="Gui\GuiSettings.cs" />
+    <Compile Include="Gui\GuiToollBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiViewportControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meshes\MeshDefaultEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meshes\MeshEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meshes\MeshInstance.cs" />
+    <Compile Include="Meshes\MeshModel.cs" />
+    <Compile Include="Meshes\MeshSettings.cs" />
+    <Compile Include="Meshes\MeshTrianglesEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meshes\MeshView.cs" />
+    <Compile Include="Meshes\SolarForge\Meshes\MeshTrianglesView.cs" />
+    <Compile Include="ModdingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModdingDialog.Designer.cs">
+      <DependentUpon>ModdingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MruMenu.cs" />
+    <Compile Include="MruMenuInline.cs" />
+    <Compile Include="MruStripMenu.cs" />
+    <Compile Include="MruStripMenuInline.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParticleEffects\ParticleEffectMeshPointReference.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectModel.cs" />
+    <Compile Include="ParticleEffects\ParticleEffectPropertiesTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParticleEffects\ParticleEffectSettings.cs" />
+    <Compile Include="ParticleEffects\ParticleEmitterEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParticleEffects\ParticleModifierEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramModel.cs" />
+    <Compile Include="ProgramOutputHandler.cs" />
+    <Compile Include="ProgramSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Scenarios\GalaxyChartEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenarios\GalaxyChartGeneratorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenarios\GalaxyChartGeneratorParamsTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenarios\GalaxyChartTreeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenarios\NodeGraphicsManager.cs" />
+    <Compile Include="Scenarios\ScenarioEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenarios\ScenarioModel.cs" />
+    <Compile Include="Scenarios\ScenarioSettings.cs" />
+    <Compile Include="Scenarios\ScenarioViewportActionMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenarios\ScenarioViewportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scenes\CameraSettings.cs" />
+    <Compile Include="Scenes\SceneModel.cs" />
+    <Compile Include="Scenes\SceneModel2d.cs" />
+    <Compile Include="Scenes\SceneModel3d.cs" />
+    <Compile Include="Scenes\SceneSettings2d.cs" />
+    <Compile Include="Scenes\SceneSettings3d.cs" />
+    <Compile Include="SceneToolBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skyboxes\SkyboxModel.cs" />
+    <Compile Include="Skyboxes\SkyboxNameJsonConverter.cs" />
+    <Compile Include="Skyboxes\SkyboxSettings.cs" />
+    <Compile Include="Units\SkinStageMeshTable.cs" />
+    <Compile Include="Units\TurretMeshes.cs" />
+    <Compile Include="Units\UnitCarrierEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\UnitDebrisEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\UnitEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\UnitFactoryEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\UnitModel.cs" />
+    <Compile Include="Units\UnitSettings.cs" />
+    <Compile Include="Units\UnitSkinsEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\UnitSpatialEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\UnitView.cs" />
+    <Compile Include="Units\UnitWeaponsEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utility\AdvancedFolderBrowserDialog.cs" />
+    <Compile Include="Utility\AdvancedFolderNameEditor.cs" />
+    <Compile Include="Utility\ColorJsonConverter.cs" />
+    <Compile Include="Utility\IDataSourcePathResolver.cs" />
+    <Compile Include="Utility\IJsonBeautifier.cs" />
+    <Compile Include="Utility\KeyState.cs" />
+    <Compile Include="Utility\PropertyGridExtension.cs" />
+    <Compile Include="Utility\TreeViewUiState.cs" />
+    <Compile Include="ViewportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutDialog.resources" />
+    <EmbeddedResource Include="BeamEffects\BeamEffectEditorControl.resources" />
+    <EmbeddedResource Include="Brushes\BrushEditorControl.resources" />
+    <EmbeddedResource Include="DeathSequences\DeathSequenceEditorControl.resources" />
+    <EmbeddedResource Include="Dialogs\KeyBindingsDialog.resources" />
+    <EmbeddedResource Include="GalaxyChartFillings\GalaxyChartFillingsEditorDialog.resources" />
+    <EmbeddedResource Include="GalaxyChartFillings\GalaxyChartFillingsTreeControl.resources" />
+    <EmbeddedResource Include="GalaxyChartFillings\RandomFixtureDataControl.resources" />
+    <EmbeddedResource Include="GalaxyChartFillings\RandomSkyboxDataControl.resources" />
+    <EmbeddedResource Include="Gui\GuiComponentsListControl.resources" />
+    <EmbeddedResource Include="Gui\GuiEditorControl.resources" />
+    <EmbeddedResource Include="Gui\GuiToollBar.resources" />
+    <EmbeddedResource Include="MainForm.resources" />
+    <EmbeddedResource Include="Meshes\MeshDefaultEditorControl.resources" />
+    <EmbeddedResource Include="Meshes\MeshEditorControl.resources" />
+    <EmbeddedResource Include="Meshes\MeshTrianglesEditorControl.resources" />
+    <EmbeddedResource Include="ModdingDialog.resources" />
+    <EmbeddedResource Include="ParticleEffects\ParticleEffectEditorControl.resources" />
+    <EmbeddedResource Include="ParticleEffects\ParticleEffectPropertiesTreeControl.resources" />
+    <EmbeddedResource Include="ParticleEffects\ParticleEmitterEditorControl.resources" />
+    <EmbeddedResource Include="ParticleEffects\ParticleModifierEditorControl.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="Scenarios\GalaxyChartEditorControl.resources" />
+    <EmbeddedResource Include="Scenarios\GalaxyChartGeneratorControl.resources" />
+    <EmbeddedResource Include="Scenarios\GalaxyChartGeneratorParamsTreeControl.resources" />
+    <EmbeddedResource Include="Scenarios\GalaxyChartTreeControl.resources" />
+    <EmbeddedResource Include="Scenarios\ScenarioEditorControl.resources" />
+    <EmbeddedResource Include="Scenarios\ScenarioViewportActionMenu.resources" />
+    <EmbeddedResource Include="Scenarios\ScenarioViewportControl.resources" />
+    <EmbeddedResource Include="SceneToolBar.resources" />
+    <EmbeddedResource Include="SettingsDialog.resources" />
+    <EmbeddedResource Include="Units\UnitCarrierEditorControl.resources" />
+    <EmbeddedResource Include="Units\UnitDebrisEditorControl.resources" />
+    <EmbeddedResource Include="Units\UnitEditorControl.resources" />
+    <EmbeddedResource Include="Units\UnitFactoryEditorControl.resources" />
+    <EmbeddedResource Include="Units\UnitSkinsEditorControl.resources" />
+    <EmbeddedResource Include="Units\UnitSpatialEditorControl.resources" />
+    <EmbeddedResource Include="Units\UnitWeaponsEditorControl.resources" />
+    <EmbeddedResource Include="ViewportControl.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
